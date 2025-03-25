@@ -115,9 +115,8 @@ export default function Home() {
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
               Featured Posts
             </h2>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-              Handpicked content you don't want to miss
-            </p>
+            <p>{"Handpicked content you don't want to miss"}</p>
+
           </div>
 
           <div className="grid gap-8 md:grid-cols-2">
@@ -245,7 +244,9 @@ export default function Home() {
               >
                 <div className="md:flex">
                   <div className="md:flex-shrink-0 md:w-1/3">
-                    <img
+                    <Image
+                      width={500}  // Required
+                      height={300} // Required
                       className="h-full w-full object-cover"
                       src={product.image}
                       alt={product.name}
