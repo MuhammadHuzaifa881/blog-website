@@ -1,0 +1,177 @@
+/* components/Products/Products.module.css */
+.productsContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+  }
+  
+  .sectionSubtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #718096;
+    margin-bottom: 2rem;
+  }
+  
+  .productGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .productCard {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .productCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .productImageContainer {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .productImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .productCard:hover .productImage {
+    transform: scale(1.05);
+  }
+  
+  .newBadge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #38a169;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .discountBadge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e53e3e;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .productInfo {
+    padding: 1.25rem;
+  }
+  
+  .productName {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+  }
+  
+  .productDescription {
+    color: #718096;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .rating {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .starFilled {
+    color: #f6ad55;
+    font-size: 1rem;
+  }
+  
+  .starEmpty {
+    color: #cbd5e0;
+    font-size: 1rem;
+  }
+  
+  .ratingCount {
+    margin-left: 0.5rem;
+    color: #718096;
+    font-size: 0.8rem;
+  }
+  
+  .priceContainer {
+    margin-bottom: 1.25rem;
+  }
+  
+  .currentPrice {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2d3748;
+  }
+  
+  .originalPrice {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: #a0aec0;
+    margin-right: 0.75rem;
+  }
+  
+  .discountedPrice {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #e53e3e;
+  }
+  
+  .addToCartButton {
+    width: 100%;
+    padding: 0.75rem;
+    background: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .addToCartButton:hover {
+    background: #3182ce;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .productGrid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .productGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .sectionTitle {
+      font-size: 1.8rem;
+    }
+  }
